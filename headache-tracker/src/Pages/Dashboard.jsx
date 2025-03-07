@@ -1,7 +1,16 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 function Dashboard() {
-  return <h2>You will be able to see stats and log headaches here.</h2>;
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <Link to="/logheadache">
+        <button>Log Headache</button>
+      </Link>
+    </div>
+  );
 }
 
 export default Dashboard;
