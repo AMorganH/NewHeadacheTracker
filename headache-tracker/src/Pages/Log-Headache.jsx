@@ -68,12 +68,24 @@ function LogHeadache() {
         </Field>
         <ErrorMessage name="painType" component="div" className="error" />
 
-        <label>Symptoms:</label>
-        <Field as="select" name="symptoms" multiple>
-          <option value="nausea">Nausea</option>
-          <option value="sensitivity_to_light">Sensitivity to Light</option>
-          <option value="dizziness">Dizziness</option>
-        </Field>
+        <div role="group">
+          <label>
+            <Field type="checkbox" name="symptoms" value="Nausea" /> Nausea
+          </label>
+          <label>
+            <Field
+              type="checkbox"
+              name="symptoms"
+              value="Sensitivity to Light"
+            />{" "}
+            Sensitivity to Light
+          </label>
+          <label>
+            <Field type="checkbox" name="symptoms" value="Dizziness" />{" "}
+            Dizziness
+          </label>
+        </div>
+        <ErrorMessage name="symptoms" component="div" className="error" />
 
         <label>Duration (hours, in 0.25 increments):</label>
         <Field type="number" name="duration" step="0.25" required />
